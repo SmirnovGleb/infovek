@@ -1,0 +1,29 @@
+### Eclipse ###
+.classpath
+.project
+.settings/
+target/
+bin/
+log/
+.log
+
+/js/node_modules/
+/js/coverage/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+*.class
