@@ -1,0 +1,14 @@
+net/infovek/lambda/infoveklamda/TestUtils$DynamodbEventMixin$StreamRecordMixin.class
+net/infovek/lambda/infoveklamda/TestUtils$UpperCaseRecordsPropertyNamingStrategy.class
+net/infovek/lambda/infoveklamda/LambdaFunctionHandlerTest.class
+net/infovek/lambda/infoveklamda/TestUtils$1.class
+net/infovek/lambda/infoveklamda/TestUtils.class
+net/infovek/lambda/infoveklamda/TestContext.class
+net/infovek/lambda/infoveklamda/TestUtils$DateTimeSerializer.class
+net/infovek/lambda/infoveklamda/TestUtils$DynamodbEventMixin$AttributeValueMixIn.class
+net/infovek/lambda/infoveklamda/TestContext$1.class
+net/infovek/lambda/infoveklamda/TestContext$TestLogger.class
+net/infovek/lambda/infoveklamda/TestUtils$DynamodbEventMixin.class
+net/infovek/lambda/infoveklamda/TestUtils$DynamodbEventMixin$RecordMixin.class
+net/infovek/lambda/infoveklamda/TestUtils$DateTimeDeserializer.class
+net/infovek/lambda/infoveklamda/TestUtils$TestJacksonMapperModule.class
