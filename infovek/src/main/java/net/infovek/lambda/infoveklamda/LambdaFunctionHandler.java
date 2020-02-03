@@ -3,6 +3,7 @@ package net.infovek.lambda.infoveklamda;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -111,6 +112,11 @@ public class LambdaFunctionHandler implements RequestStreamHandler {
 		                for (String key : keys) {
 		                    System.out.format("%s: %s\n",
 		                            key, returned_item.get(key).toString());
+		                }
+		                Collection<AttributeValue> vals = returned_item.values();
+		                for (AttributeValue val : vals) {
+		                    System.out.format("%s: %s\n",
+		                    		val.getS(), " sdfsdfsdfsdfsdfsdfsdfsdf1!!!!!!!!!!!!!!!!!S");
 		                }
 		            } else {
 		                System.out.format("No item found with the key %s!\n", "");
