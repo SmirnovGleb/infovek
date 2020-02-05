@@ -68,7 +68,7 @@ public class LambdaFunctionHandler implements RequestStreamHandler {
 			responseBody.put("message", "New item created");
 
 			JSONObject headerJson = new JSONObject();
-			headerJson.put("x-custom-header", "11111!!!111");
+			headerJson.put("x-custom-header", "check chek");
 
 			responseJson.put("statusCode", 200);
 			responseJson.put("headers", headerJson);
