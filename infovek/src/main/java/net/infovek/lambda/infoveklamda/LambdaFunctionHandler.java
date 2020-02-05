@@ -116,7 +116,7 @@ public class LambdaFunctionHandler implements RequestStreamHandler {
 		                Collection<AttributeValue> vals = returned_item.values();
 		                for (AttributeValue val : vals) {
 		                    System.out.format("%s: %s\n",
-		                    		val.getS(), " sdfsdfsdfsdfsdfsdfsdfsdf1!!!!!!!!!!!!!!!!!S");
+		                    		val.getS(), " QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ");
 		                }
 		            } else {
 		                System.out.format("No item found with the key %s!\n", "");
