@@ -1,8 +1,12 @@
 package net.infovek.lambda.infoveklamda.model;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+@DynamoDBTable(tableName = "myDynamoDB")
 public class Person {
 
 	private int id;
@@ -10,18 +14,18 @@ public class Person {
 	private String surname;
 	private int age;
 
-	public Person(String json) {
-		Gson gson = new Gson();
-		Person request = gson.fromJson(json, Person.class);
-		this.id = request.getId();
-		this.name = request.getName();
+	public Person() {
+		name = "unknown person";
 	}
 
-	public String toString() {
-		final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		return gson.toJson(this);
+	public Person(int id, String name, String surname, int age) {
+		this.id = id;
+		this.name = name;
+		this.surname = surname;
+		this.age = age;
 	}
 
+	@DynamoDBHashKey(attributeName = "id")
 	public int getId() {
 		return id;
 	}
@@ -30,6 +34,7 @@ public class Person {
 		this.id = id;
 	}
 
+	@DynamoDBAttribute(attributeName = "name")
 	public String getName() {
 		return name;
 	}
@@ -38,6 +43,7 @@ public class Person {
 		this.name = name;
 	}
 
+	@DynamoDBAttribute(attributeName = "surname")
 	public String getSurname() {
 		return surname;
 	}
@@ -46,6 +52,7 @@ public class Person {
 		this.surname = surname;
 	}
 
+	@DynamoDBAttribute(attributeName = "age")
 	public int getAge() {
 		return age;
 	}
@@ -53,5 +60,9 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + "]";
+	}
 }
