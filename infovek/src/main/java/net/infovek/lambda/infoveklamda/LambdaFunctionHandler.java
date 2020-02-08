@@ -23,7 +23,4 @@ public class LambdaFunctionHandler implements RequestHandler<PersonRequest, Pers
 		}
 		return person;
 	}
-
-
-	
 }
