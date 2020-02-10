@@ -7,6 +7,10 @@ public class PersonResponse {
 	public PersonResponse() {
 	}
 
+	public PersonResponse(String status) {
+		this.status = status;
+	}
+
 	public PersonResponse(String status, Person person) {
 		this.status = status;
 		this.person = person;

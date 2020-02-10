@@ -22,22 +22,24 @@ public class LambdaFunctionHandler implements RequestHandler<PersonRequest, Pers
 		int id = personRequest.getId();
 		Person person = personRequest.getPerson();
 		
+		PersonResponse personResponse = new PersonResponse();
+		
 		switch(action) {
 			case "get":
-				getPerson(id, context);
+				personResponse.setStatus("success");
+				personResponse.setPerson(getPerson(id, context));
 				break;
 			case "create":
-				getPerson(id, context);
-				break;
-			case "update":
-				getPerson(id, context);
-				break;
+				mapper.save(person);
+				personResponse.setStatus("saved");
+				break;			
 			case "delete":
-				getPerson(id, context);
+				mapper.delete(person);
+				personResponse.setStatus("deleted");
 				break;
 		}
 		
-		return new PersonResponse();
+		return personResponse;
 	}
 	
 	private Person getPerson(int id, Context context){
@@ -49,5 +51,4 @@ public class LambdaFunctionHandler implements RequestHandler<PersonRequest, Pers
 		
 		return person;
 	}
-	
 }
