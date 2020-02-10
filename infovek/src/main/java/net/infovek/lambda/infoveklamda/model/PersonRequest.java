@@ -17,6 +17,12 @@ public class PersonRequest {
 		this.person = person;
 	}
 
+	public PersonRequest(int id, String action, Person person) {
+		this.id = id;
+		this.action = action;
+		this.person = person;
+	}
+
 	public int getId() {
 		return id;
 	}
