@@ -12,7 +12,7 @@ public class PersonRequest {
 		this.id = id;
 	}
 
-	private PersonRequest(String action, Person person) {
+	public PersonRequest(String action, Person person) {
 		this.action = action;
 		this.person = person;
 	}
